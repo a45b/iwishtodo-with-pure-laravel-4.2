@@ -70,6 +70,7 @@ class WishController extends \BaseController {
 	 */
 	public function edit($id)
 	{
+		
 		$wish = Wish::find($id);		
 		return View::make('wish.edit',compact('wish'));
 	}

@@ -16,15 +16,14 @@
 		</div>		
 		{{ Form::open(array('url' => 'wish')) }}
 		<div class="form-group">
-		    <label>Wish</label>
-		    <textarea name="wish" class="form-control" rows="4" placeholder="Example: I want to visit Japan"></textarea>
+		    <textarea name="wish" class="form-control" rows="4" placeholder="Make a wish"></textarea>
 		    <p class="text-danger">{{ $errors->first('wish') }}</p>
 		</div>
 		<div class="form-group">
 			<button class="btn btn-primary pull-right" type="submit">Save</button>  
-		</div>
+		</div>				
 		{{ Form::close() }}
     </div>
-  </div>  
+  </div>
 </div>
 @stop

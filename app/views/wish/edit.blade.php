@@ -10,10 +10,11 @@
 @section('content')
 <div class="container">
   <div class="row">
+  	@if($wish->status != 'done')
     <div class="col-md-12">
     	<div class="page-header">
 		  <h1>Update Wish</h1>
-		</div>		
+		</div>				
 		{{ Form::open(array('route' => array('wish.update', $wish->id), 'method' => 'put')) }}
 		<div class="form-group">
 		    <label>Wish</label>
@@ -23,8 +24,16 @@
 		<div class="form-group">
 			<button class="btn btn-primary pull-right" type="submit">Save</button>  
 		</div>
-		{{ Form::close() }}
+		{{ Form::close() }}		
     </div>
+    @else
+	<div class="col-md-12">    		
+	  <div class="alert alert-danger">
+	    Can't edit accomplished this wish.
+	  </div>			
+	</div>
+	@endif
+
   </div>  
 </div>
 @stop
